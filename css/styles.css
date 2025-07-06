@@ -11,7 +11,8 @@ footer {
 }
 
 body {
-  background-image: url("../img/bg.jpg");
+  background-image: url("../img/bg.png");
+  background-size: cover;
   font-family: "Open Sans", sans-serif;
   color: black;
   margin: 0;
