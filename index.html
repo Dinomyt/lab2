@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <title>Neng Lao: Lab 2</title>
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+
+  <body>
+    <header>
+      <h1
+        style="
+          display: inline-block;
+          color: rgb(255, 255, 255);
+          border: 2px solid rgb(255, 255, 255);
+          padding: 0.25em 0.5em;
+          border-radius: 4px;
+          cursor: pointer;
+        "
+        onclick="location.href='index.html';"
+      >
+        Guess the number!
+      </h1>
+      <h2 style="color: white" id="resultMsg">
+        Guess a number between 1 and 99 in seven attempts!
+      </h2>
+                <button id="resetBtn">Reset</button>
+
+      <hr />
+
+      <div id="container">
+        <div id="guessWrapper">
+          <div id="main" class="flex">
+            Enter a guess:
+            <input type="text" id="playerGuess" size="5" />
+            <button id="guessBtn">Guess</button>
+          </div>
+        </div>
+
+        <div class="flex" id="result" style="color: white; font-weight: bold">
+          <table>
+            <tr>
+              <td>Attempts:</td>
+              <td id="attempts">0</td>
+            </tr>
+            <tr>
+              <td>Last Guess:</td>
+              <td id="lastGuess">None</td>
+            </tr>
+            <tr>
+              <td>Result:</td>
+              <td id="resultText">Make a guess!</td>
+            </tr>
+          </table>
+        </div>
+      </div>
+    </header>
+
+    
+
+    <footer>
+      <hr />
+      CST 336 Internet Programming. 2025 &copy; Lao <br />
+      <strong>Disclaimer:</strong> The information in this website is
+      fictitious. <br />
+      It is used for academic purposes only. <br />
+      <img src="img/csumb.png" alt="CSUMB Logo" />
+    </footer>
+    <script src="js/script.js"></script>
+  </body>
+</html>
