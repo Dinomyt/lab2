@@ -83,10 +83,10 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       if (guess < randomNumber) {
         resultTextCell.textContent = "Too low!";
-        resultMsg.textContent = "Try again!";
+        resultMsg.innerHTML = "Try again!<br><br>Too low!";
       } else {
         resultTextCell.textContent = "Too high!";
-        resultMsg.textContent = "Try again!";
+        resultMsg.innerHTML = "Try again!<br><br>Too high!";
       }
       playerGuess.value = "";
       playerGuess.focus();
