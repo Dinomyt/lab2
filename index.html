@@ -1,77 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="utf-8" />
-    <title>Neng Lao: Lab 2</title>
+    <title>Neng Lao: Lab 3 - Sign Up</title>
     <link rel="stylesheet" href="css/styles.css" />
-  </head>
-
-  <body>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body>
     <header>
-      <h1
-        style="
-          display: inline-block;
-          color: rgb(255, 255, 255);
-          border: 2px solid rgb(255, 255, 255);
-          padding: 0.25em 0.5em;
-          border-radius: 4px;
-          cursor: pointer;
-        "
-        onclick="location.href='index.html';"
-      >
-        Guess the number!
-      </h1>
-      <h2 style="color: white" id="resultMsg">
-        Guess a number between 1 and 99 in seven attempts!
-      </h2>
-      <button id="resetBtn">Reset</button>
-
-      <hr />
-
-      <div id="container">
-        <div id="guessWrapper">
-          <div id="main" class="flex">
-            Enter a guess:
-            <input type="text" id="playerGuess" size="5" />
-            <button id="guessBtn">Guess</button>
-          </div>
-        </div>
-
-        <div class="flex" id="result" style="color: white; font-weight: bold">
-          <table>
-            <tr>
-              <td>Attempts:</td>
-              <td id="attempts">0</td>
-            </tr>
-            <tr>
-              <td>Last Guess:</td>
-              <td id="lastGuess">None</td>
-            </tr>
-            <tr>
-              <td>Result:</td>
-              <td id="resultText">Make a guess!</td>
-            </tr>
-            <tr>
-              <td>Wins:</td>
-              <td id="wins">0</td>
-            </tr>
-            <tr>
-              <td>Losses:</td>
-              <td id="losses">0</td>
-            </tr>
-          </table>
-        </div>
-      </div>
+        <h1>Create a new account</h1>
+        <p>It's quick and easy.</p>
     </header>
 
-    <footer style="color: white">
-      <hr />
-      CST 336 Internet Programming. 2025 &copy; Lao <br />
-      <strong>Disclaimer:</strong> The information in this website is
-      fictitious. <br />
-      It is used for academic purposes only. <br />
-      <img src="img/csumb.png" alt="CSUMB Logo" style="filter:brightness(0.5)"/>
+    <main class="container">
+        <form id="signupForm">
+            <div class="form-row">
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="firstName" placeholder="First name" required>
+                </div>
+                <div class="form-group col-md-6">
+                    <input type="text" class="form-control" id="lastName" placeholder="Last name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <input type="text" class="form-control" id="username" placeholder="Username">
+                <span id="usernameStatus"></span>
+            </div>
+
+            <div class="form-group">
+                <input type="password" class="form-control" id="password" placeholder="New password">
+                <span id="passwordSuggestion"></span>
+                <small id="passwordError" class="form-text text-danger"></small>
+            </div>
+
+            <div class="form-group">
+                <input type="password" class="form-control" id="retypePassword" placeholder="Retype password">
+                <small id="retypePasswordError" class="form-text text-danger"></small>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-4">
+                    <label for="state">State</label>
+                    <select id="state" class="form-control">
+                        <option value="">Select State...</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="county">County</label>
+                    <select id="county" class="form-control">
+                        <option>Select County...</option>
+                    </select>
+                </div>
+                <div class="form-group col-md-4">
+                    <label for="zipCode">Zip Code</label>
+                    <input type="text" class="form-control" id="zipCode" maxlength="5">
+                    <span id="zipCodeError" class="text-danger"></span>
+                </div>
+            </div>
+            
+            <div class="form-row">
+                 <div class="form-group col-md-6">
+                    <label for="city">City</label>
+                    <input type="text" class="form-control" id="city" readonly>
+                </div>
+                 <div class="form-group col-md-3">
+                    <label for="latitude">Latitude</label>
+                    <input type="text" class="form-control" id="latitude" readonly>
+                </div>
+                 <div class="form-group col-md-3">
+                    <label for="longitude">Longitude</label>
+                    <input type="text" class="form-control" id="longitude" readonly>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-success btn-block">Sign Up</button>
+        </form>
+    </main>
+
+    <footer class="text-center">
+        <hr />
+        CST 336 Internet Programming. 2025 &copy; Lao <br />
+        <strong>Disclaimer:</strong> The information in this website is fictitious. <br />
+        It is used for academic purposes only. <br />
+        <img src="img/csumb.png" alt="CSUMB Logo" style="filter:brightness(0.5); width: 100px;"/>
     </footer>
+
     <script src="js/script.js"></script>
-  </body>
+</body>
 </html>
